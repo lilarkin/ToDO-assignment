@@ -1,0 +1,18 @@
+<h1>Your ToDo list is:</h1>
+
+<i>
+  Item: <%= @todo.item %> 
+</i>
+
+<i>
+  Posted At: <%= @todo.created_at %> 
+</i>
+
+<p> 
+  <%= @todo.description %> 
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo) %>
+<%= link_to 'Delete', delete_todo_path(@todo), method: :delete, data: {confirm: 'Really Delete?'} %>
+
+<%= link_to 'Home', root_path %>
